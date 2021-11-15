@@ -48,6 +48,7 @@ public class Enemy {
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
+            attack = 0;
             System.out.printf("モンスター%sは倒れた。\n", name);
         }
     }
