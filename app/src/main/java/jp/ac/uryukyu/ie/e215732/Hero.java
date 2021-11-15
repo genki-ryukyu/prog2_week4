@@ -10,21 +10,33 @@ package jp.ac.uryukyu.ie.e215732;
  */
 public class Hero {
     private String name;
+    /**
+     * getName(); //敵の名前。カプセル化状態
+     */
     public String getName(){
         return this.name;
     };
 
     private int hitPoint;
+    /**
+     * getHitPoint(); //敵のHP。カプセル化状態
+     */
     public int getHitPoint(){
         return this.hitPoint;
     }
 
     private int attack;
+    /**
+     * getAttack(); //敵の攻撃力。カプセル化状態
+     */
     public int getAttack(){
         return this.attack;
     }
 
     private boolean dead;
+    /**
+     * getDead(); //敵の生死状態。true=死。カプセル化状態
+     */
     public boolean getDead(){
         return this.dead;
     }
