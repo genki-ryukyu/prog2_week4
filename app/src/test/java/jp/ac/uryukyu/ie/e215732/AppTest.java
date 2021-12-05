@@ -5,7 +5,7 @@ package jp.ac.uryukyu.ie.e215732;
 
 import org.junit.jupiter.api.Test;
 
-import jp.ac.uryukyu.ie.e215732.App;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
