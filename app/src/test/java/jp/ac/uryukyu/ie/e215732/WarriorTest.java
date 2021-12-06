@@ -10,18 +10,21 @@ class WarriorTest {
     /**
      * 倒れたはずの敵は攻撃できないことを検証。
      * 検証手順
-     *  (1) ヒーローと敵を準備。ヒーローの攻撃力は敵を一撃で倒せるほど強い状態とする。
-     *  (2) ヒーローが殴り、敵も殴る。敵は一撃で倒されていることを期待。
-     *  (3) 敵が死んだ状態ならば攻撃できないはず。
-     * 　　つまり攻撃実行してもヒーローのHPは減っていないことを期待。これを検証する。
+     *  (1) ヒーローと敵を準備。
+     *  (2) ヒーローが殴り、敵も殴る。ヒーローの攻撃力が1.5倍の火力になっていることを確認する
      */
     @Test
     void attackTest() {
         int defaultHeroHp = 100;
         Warrior demoHero = new Warrior("デモ勇者", defaultHeroHp, 100);
-        Enemy slime = new Enemy("スライムもどき", 10, 100);
-        demoHero.attackWithWeponSkill(slime);
+        int slimeHP = 450;
+        Enemy slime = new Enemy("スライムもどき", slimeHP, 100);
         slime.attack(demoHero);
         assertEquals(defaultHeroHp, demoHero.attack);
+         
+       for(int i = 0; i<3; i++){
+        demoHero.attackWithWeponSkill(slime);
+    }
+
     }
 }
